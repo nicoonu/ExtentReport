@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class BasePage {
+public class BasePageTw {
 
     WebDriver driver;
 
-    public BasePage(WebDriver d) {
+    public BasePageTw(WebDriver d) {
         this.driver = d;
     }
 

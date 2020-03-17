@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginTwPage extends BasePage{
+public class LoginPageTw extends BasePageTw {
 
-    public LoginTwPage(WebDriver d) {
+    public LoginPageTw(WebDriver d) {
         super(d);
     }
 

@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class ExtentReportTest extends BaseTest{
+public class ExtentReportTest extends BaseTest {
 
     public static ExtentTest extentTest;
     public static ExtentHtmlReporter htmlReporter;
