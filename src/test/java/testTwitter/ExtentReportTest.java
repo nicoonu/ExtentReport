@@ -18,6 +18,8 @@ public class ExtentReportTest extends BaseTest {
 
     @BeforeTest
     public void setUpReport(){
+
+        /* Creo una instancia de reporte HTML y le indica la ruta donde quiero que me guarde el informe */
         htmlReporter = new ExtentHtmlReporter("./Reports/login.html");
         extentReport = new ExtentReports();
         extentReport.attachReporter(htmlReporter);
@@ -25,6 +27,10 @@ public class ExtentReportTest extends BaseTest {
 
     @AfterMethod
     public void getResult(ITestResult result){
+
+        /* En esta funcion, utilizo la clase ExtentTest para registrar los resultados de mis test. */
+        /* Segun el estado del test, me va a mostrar diferentes mensajes */
+
         if(result.getStatus() == ITestResult.FAILURE){
             extentTest.fail(MarkupHelper.createLabel(result.getName() + " Test Case Failed", ExtentColor.RED));
             extentTest.fail(result.getThrowable());
@@ -35,7 +41,7 @@ public class ExtentReportTest extends BaseTest {
         }
 
         else{
-            extentTest.fail(MarkupHelper.createLabel(result.getName() + " Test Case Skipped", ExtentColor.BLUE));
+            extentTest.skip(MarkupHelper.createLabel(result.getName() + " Test Case Skipped", ExtentColor.BLUE));
             extentTest.skip(result.getThrowable());
         }
     }

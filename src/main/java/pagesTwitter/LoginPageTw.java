@@ -10,9 +10,9 @@ public class LoginPageTw extends BasePageTw {
         super(d);
     }
 
-    @FindBy (name = "session[username_or_email]") public WebElement userName;
+    @FindBy (name = "session[username_or_email]") public static WebElement userName;
 
-    @FindBy (name = "session[password]") public WebElement password;
+    @FindBy (name = "session[password]") public static WebElement password;
 
     @FindBy(xpath = "//*[@id=\"react-root\"]/div/div/div/main/div/div/div/div[1]/div/a[2]") WebElement signInButton;
 

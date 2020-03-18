@@ -1,4 +1,4 @@
-package testOle;
+package testFlights;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
@@ -9,9 +9,8 @@ import pagesFlights.PageFly;
 
 public class CheckTestFly extends ExReportTest{
 
-    @Test (priority = 0)
+    @Test (priority = 0, description = "Verifico que el lugar de origen de mi vuelo sea efectivamente Berlin")
     public void verifyStartingPlaceIsBerlin() throws InterruptedException {
-
         extentTest = extentReport.createTest("verifyStartingPlaceIsBerlin");
 
         PageFly pageFly = PageFactory.initElements(driver, PageFly.class);
@@ -28,9 +27,8 @@ public class CheckTestFly extends ExReportTest{
         Assert.assertTrue(pageFly.from.getAttribute("value").contains("Berlín"));
     }
 
-    @Test (priority = 1)
+    @Test (priority = 1, description = "Verifico que mi lugar de destino de mi vuelo sea efectivamente Manhattan")
     public void verifyDestinyPlaceIsManhattan() throws InterruptedException {
-
         extentTest = extentReport.createTest("verifyDestinyPlaceIsManhattan");
 
         PageFly pageFly = PageFactory.initElements(driver, PageFly.class);
@@ -47,7 +45,8 @@ public class CheckTestFly extends ExReportTest{
         Assert.assertTrue(pageFly.to.getAttribute("value").contains("Manhattan"));
     }
 
-    @Test
+    @Test (priority = 2, description = "Verifico que luego de ingresar los datos de mi vuelo hayan sido los esperados" +
+            "y sea redirigido a la pagina donde se encuentran los resultados de haber buscado.")
     public void verifyFlightFromEgyptToAustralia() throws InterruptedException {
         extentTest = extentReport.createTest("verifyDestinyPlaceIsManhattan");
 
@@ -61,8 +60,11 @@ public class CheckTestFly extends ExReportTest{
 
         pageFly.from.clear(); pageFly.writeFrom("El Cairo, Egipto");
         Thread.sleep(1000); pageFly.from.sendKeys(Keys.ENTER);
-        pageFly.to.clear(); pageFly.writeDestiny("Sydney, Australia");
+        pageFly.to.clear(); pageFly.writeDestiny("Sidney, Australia");
         Thread.sleep(1000); pageFly.to.sendKeys(Keys.ENTER);
+
+        Assert.assertTrue(pageFly.from.getAttribute("value").contains("El Cairo"));
+        Assert.assertTrue(pageFly.to.getAttribute("value").contains("Sídney"));
 
         pageFly.fechaClick.click();
         pageFly.enterDate(); homePageFly.searchFlights();

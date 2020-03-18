@@ -1,4 +1,4 @@
-package pagesOle;
+package pagesFlights;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +19,4 @@ public class BasePageFly {
     public void writeText(WebElement element, String text) {
         element.sendKeys(text);
     }
-
-    public void getText(){}
 }
