@@ -1,12 +1,12 @@
-package testTwitter;
+package extentReportsTest.testTwitter;
 
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pagesTwitter.HomePageTw;
-import pagesTwitter.LoginPageTw;
+import extentReportPages.pagesTwitter.HomePageTw;
+import extentReportPages.pagesTwitter.LoginPageTw;
 
 public class LoginTwTest extends ExtentReportTest {
 

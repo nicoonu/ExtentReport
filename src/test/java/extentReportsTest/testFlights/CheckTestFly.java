@@ -1,11 +1,11 @@
-package testFlights;
+package extentReportsTest.testFlights;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pagesFlights.HomePageFly;
-import pagesFlights.PageFly;
+import extentReportPages.pagesFlights.HomePageFly;
+import extentReportPages.pagesFlights.PageFly;
 
 public class CheckTestFly extends ExReportTest{
 

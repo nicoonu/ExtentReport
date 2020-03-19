@@ -1,4 +1,4 @@
-package testFlights;
+package extentReportsTest.testFlights;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,7 +20,7 @@ public class ExReportTest extends BaseTestFly {
         public void setUpReport(){
 
             /* Creo una instancia de reporte HTML y le indica la ruta donde quiero que me guarde el informe */
-            htmlReporter = new ExtentHtmlReporter("./Reports/flights.html");
+            htmlReporter = new ExtentHtmlReporter("reports/reportDemo/flights.html");
             extentReport = new ExtentReports();
             extentReport.attachReporter(htmlReporter);
         }

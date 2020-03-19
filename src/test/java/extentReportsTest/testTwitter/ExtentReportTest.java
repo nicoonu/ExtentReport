@@ -1,4 +1,4 @@
-package testTwitter;
+package extentReportsTest.testTwitter;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,7 +20,7 @@ public class ExtentReportTest extends BaseTest {
     public void setUpReport(){
 
         /* Creo una instancia de reporte HTML y le indica la ruta donde quiero que me guarde el informe */
-        htmlReporter = new ExtentHtmlReporter("./Reports/login.html");
+        htmlReporter = new ExtentHtmlReporter("reports/reportDemo/login.html");
         extentReport = new ExtentReports();
         extentReport.attachReporter(htmlReporter);
     }
